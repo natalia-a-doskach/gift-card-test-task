@@ -1,0 +1,6 @@
+.container{
+    background-image: url("../../images/music-girl.jpg");
+    background-size: cover;
+    background-color: black;
+    height: 100%;
+}
