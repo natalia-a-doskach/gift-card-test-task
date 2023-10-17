@@ -1,36 +1,39 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import ProductCard from "../components/product-card/product-card";
-import useFetch from "react-fetch-hook";
 import { BASE_URL } from "../utils/base-api-url";
 import { API_KEY } from "../utils/api-key";
-import { giftCards } from "../utils/gift-cards-data";
 import { useNavigate } from "react-router-dom";
 import Subheader from "../components/subheader/subheader";
 import styles from "./gift-card-selection.module.css";
 import Button from "../components/button/button";
+import { change_currency_to_symbol } from "../utils/text-formating";
+import { PurchaseContext } from "../utils/purchase-context";
 
 const URL = BASE_URL;
 
 function GiftCardSelectionPage() {
   const navigate = useNavigate();
-  const [selectedId, setSelectedId] = useState(null);
+  const [purchaseData, setPurchaseData] = useContext(PurchaseContext);
+  const [giftCards, setGiftCards] = useState([]);
   useEffect(() => {
     let formData = new FormData();
-    formData.append("ApiKey", "011ba11bdcad4fa396660c2ec447ef14");
-    formData.append("MethodName", "OSGetGoodList        ");
-
+    formData.append("ApiKey", API_KEY);
+    formData.append("MethodName", "OSGetGoodList");
+    formData.append("ismob", 0);
     fetch(URL, {
       body: formData,
       method: "post",
-    });
+    })
+      .then((res) => res.json())
+      .then((res) => setGiftCards(res.data));
   }, []);
 
-  const buyACard = (id) => {
+  const buyACard = () => {
     navigate("/info");
   };
-  const selectACard = (id) => {
-    if (!selectedId) setSelectedId(id);
-    else setSelectedId(null);
+  const selectACard = (card) => {
+    if (purchaseData.ID === card.ID) setPurchaseData({ ID: null, NAME: null });
+    else setPurchaseData(card);
   };
 
   return (
@@ -38,17 +41,14 @@ function GiftCardSelectionPage() {
       <Subheader>подари счастье:</Subheader>
       {giftCards.map((card) => (
         <ProductCard
-          {...card}
-          selected={card.id == selectedId}
-          onClick={() => selectACard(card.id)}
+          name={change_currency_to_symbol(card.NAME)}
+          key={card.ID}
+          selected={card.ID === purchaseData.ID}
+          onClick={() => selectACard(card)}
         />
       ))}
-      {selectedId && (
-        <Button
-          style={styles.orderBtn}
-          onClick={() => buyACard(selectedId)}
-          text={"Оформить"}
-        />
+      {purchaseData.ID && (
+        <Button style={styles.orderBtn} onClick={buyACard} text={"Оформить"} />
       )}
     </div>
   );

@@ -1,8 +1,8 @@
-.text{
-margin: 0.5rem;
-padding: 0.5rem;
-text-transform: uppercase; 
-font-family: 'Roboto', sans-serif;
-font-size: 3rem;
-margin:0px; 
+.text {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+  margin: 0px;
 }

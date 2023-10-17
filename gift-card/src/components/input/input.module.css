@@ -1,13 +1,13 @@
-.text{
-    text-transform: uppercase; 
-    font-family: 'Roboto', sans-serif;
-    font-size: 3rem;
-    margin:0px; 
-    border:none;
-    border-bottom: 0.12rem solid black;
-    max-width: 100%;
-    box-sizing: border-box;
+.text {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+  margin: 0px;
+  border: none;
+  border-bottom: 0.12rem solid black;
+  max-width: 100%;
+  box-sizing: border-box;
 }
-.text:focus{
-    outline: none;
+.text:focus {
+  outline: none;
 }

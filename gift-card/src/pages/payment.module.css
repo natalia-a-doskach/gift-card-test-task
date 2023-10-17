@@ -1,6 +1,11 @@
-.container{
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
+.container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
+.text {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+  }

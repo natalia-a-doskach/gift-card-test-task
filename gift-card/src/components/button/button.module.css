@@ -1,7 +1,7 @@
-.text{
-    text-transform: uppercase; 
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
-    cursor: pointer;
-    margin: 0px;
+.text {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 0px;
 }

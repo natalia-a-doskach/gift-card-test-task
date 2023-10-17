@@ -1,8 +1,8 @@
 import styles from "./input.module.css";
 
-function Input({ type, placeholder, onChange, value, name, error, errorText }) {
+function Input({ type, placeholder, onChange, value, name }) {
   return (
-    <div >
+    <div>
       <input
         className={styles.text}
         type={type}
@@ -10,8 +10,6 @@ function Input({ type, placeholder, onChange, value, name, error, errorText }) {
         onChange={onChange}
         value={value}
         name={name}
-        error={error}
-        errorText={errorText}
       />
     </div>
   );

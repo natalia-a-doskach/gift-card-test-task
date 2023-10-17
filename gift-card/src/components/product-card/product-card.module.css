@@ -1,18 +1,18 @@
-.container{
-    cursor: pointer;
+.container {
+  cursor: pointer;
 }
-.container:hover{
-    transform: scale(1.05);
+.container:hover {
+  transform: scale(1.05);
 }
-.name{
-margin: 0.5rem;
-padding: 0.5rem;
-text-transform: uppercase; 
-font-family: 'Roboto', sans-serif;
-font-size: 3rem;
-margin:0px; 
+.name {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+  margin: 0px;
 }
-.selected{
-    text-decoration:underline;
-    text-decoration-thickness: 0.12rem;
+.selected {
+  text-decoration: underline;
+  text-decoration-thickness: 0.12rem;
 }

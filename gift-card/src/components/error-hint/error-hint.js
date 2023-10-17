@@ -1,10 +1,13 @@
 import styles from "./error-hint.module.css";
 
-function ErrorHint({errors}) {
+function ErrorHint({ errors }) {
   return (
-    <div >
-      {errors.map(error=>
-      <p className={styles.text}>! {error}</p>)}
+    <div>
+      {errors.map((error, ind) => (
+        <p className={styles.text} key={ind}>
+          ! {error}
+        </p>
+      ))}
     </div>
   );
 }
