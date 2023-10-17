@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/gift-card-test-task/static/css/main.91f9b880.css",
+    "main.js": "/gift-card-test-task/static/js/main.2cc944e7.js",
+    "static/js/787.0a39258d.chunk.js": "/gift-card-test-task/static/js/787.0a39258d.chunk.js",
+    "static/media/music-girl.jpg": "/gift-card-test-task/static/media/music-girl.209353e012689943f896.jpg",
+    "index.html": "/gift-card-test-task/index.html",
+    "main.91f9b880.css.map": "/gift-card-test-task/static/css/main.91f9b880.css.map",
+    "main.2cc944e7.js.map": "/gift-card-test-task/static/js/main.2cc944e7.js.map",
+    "787.0a39258d.chunk.js.map": "/gift-card-test-task/static/js/787.0a39258d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.91f9b880.css",
+    "static/js/main.2cc944e7.js"
+  ]
+}
