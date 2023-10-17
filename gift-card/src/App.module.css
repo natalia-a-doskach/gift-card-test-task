@@ -10,22 +10,14 @@
 }
 .mainPageContainer {
   height: 100vh;
-  overflow: scroll;
+  box-sizing: border-box;
 }
 
 @media (max-width: 715px) {
-  html {
-    font-size: 12px;
-  }
   .container {
     display: block;
   }
   .imageContainer {
     display: none;
-  }
-}
-@media (max-width: 350px) {
-  html {
-    font-size: 10px;
   }
 }
